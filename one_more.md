@@ -45,7 +45,7 @@ lpstat -p -d
 
 ---
 
-## 4. Резервное копирование ОС (вместо student название пользователя, например vboxuser, если надо)
+## 4. Резервное копирование ОС(вместо student название пользователя, например vboxuser, если надо)
 
 ```bash
 sudo tar -cvpzf /home/student/system-backup.tar.gz \
