@@ -205,6 +205,8 @@ which <command>
 ```bash
 # Установка системы печати CUPS + виртуальный PDF-принтер
 sudo apt install -y cups cups-pdf printer-driver-cups-pdf
+#или
+sudo apt install printer-driver-cups-pdf -y
 
 # Запуск службы
 sudo systemctl enable --now cups
@@ -256,6 +258,8 @@ sudo rsync -aAXv --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/
 sudo tar -cvpzf backup.tar.gz --exclude=/backup.tar.gz \
     --exclude=/proc --exclude=/tmp --exclude=/mnt --exclude=/dev \
     --exclude=/sys --exclude=/run --one-file-system /
+#или
+sudo apt install 7zip 7zip-rar
 ```
 
 ### 2.2 Создание установочного образа системы (1 балл)
@@ -305,6 +309,8 @@ groups ivanov
 cat /etc/group | grep developers
 getent group developers
 
+#создание папки 
+sudo mkdir -p /opt/project
 # Настройка прав доступа (соответствие набору разрешённых действий!)
 sudo chown ivanov:developers /opt/project
 sudo chmod 750 /opt/project              # rwx для владельца и группы, ничего для остальных
