@@ -24,6 +24,8 @@ ip a
 sudo apt install -y libreoffice
 sudo apt install -y gimp
 sudo apt install -y p7zip-full p7zip-rar
+#или
+sudo apt install p7zip-full p7zip-rar
 ```
 
 ---
@@ -32,6 +34,8 @@ sudo apt install -y p7zip-full p7zip-rar
 
 ```bash
 sudo apt install cups-pdf
+#или
+sudo apt install printer-driver-cups-pdf -y
 ```
 
 Проверить, что принтер появился (на всякий случай, если попросят продемонстрировать):
@@ -79,6 +83,7 @@ cat /etc/group | grep developers
 
 Права доступа (соседний подкритерий):
 ```bash
+sudo mkdir -p /opt/project
 sudo chown ivanov:developers /opt/project
 sudo chmod 750 /opt/project
 ```
